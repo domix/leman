@@ -71,7 +71,7 @@ public class InternalFrameCatalogUsers extends InternalFrameCatalog {
     int numUser = this.table.getSelectedRow();
 
     if (numUser >= 0) {
-      String men = "¿Deseas borrar al usuario " + table.getValueAt(numUser, 1) +
+      String men = "Â¿Deseas borrar al usuario " + table.getValueAt(numUser, 1) +
                    "?";
       int i = JOptionPane.showConfirmDialog(this.frame, men, "Leman-Usuarios",
                                             JOptionPane.YES_NO_OPTION,

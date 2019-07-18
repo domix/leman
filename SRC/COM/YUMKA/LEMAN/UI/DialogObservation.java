@@ -19,7 +19,7 @@ public class DialogObservation extends JDialog {
   EvaluationsdetailBean evaluationDetail;
 
   public DialogObservation(Frame frame, EvaluationsdetailBean evaluationDetail) {
-    super(frame, "Account-Observación", true);
+    super(frame, "Account-ObservaciÃ³n", true);
     this.evaluationDetail = evaluationDetail;
     try {
       jbInit();
@@ -46,9 +46,9 @@ public class DialogObservation extends JDialog {
 
   private void jbInit() throws Exception {
     panelLabels.setLayout(new GridLayout(4, 1));
-    panelLabels.add(new JLabel("Observación"));
+    panelLabels.add(new JLabel("ObservaciÃ³n"));
     panelLabels.add(new JLabel("Responsable"));
-    panelLabels.add(new JLabel("Acción a tomar"));
+    panelLabels.add(new JLabel("AcciÃ³n a tomar"));
     panelLabels.add(new JLabel("Plazo"));
 
     obs = new JTextArea(2, 30);

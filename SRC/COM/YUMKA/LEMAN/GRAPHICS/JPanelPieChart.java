@@ -144,7 +144,7 @@ public class JPanelPieChart extends JPanel {
       titleChart = isoPoint.getId() + ".- " + isoPoint.getDescription();
       result = ChartFactory.createPieChart3D(titleChart, data, true, true, false); // include legend
       PiePlot3D plot = (PiePlot3D) result.getPlot();
-      plot.setNoDataMessage("La evaluación aún no determina este punto");
+      plot.setNoDataMessage("La evaluaciÃ³n aÃºn no determina este punto");
       plot.setStartAngle(270);
       plot.setDirection(Rotation.ANTICLOCKWISE);
       plot.setForegroundAlpha(0.60f);
@@ -200,7 +200,7 @@ public class JPanelPieChart extends JPanel {
       String titleChart = "Todos los puntos";
       result = ChartFactory.createPieChart3D(titleChart, data, true, true, false); // include legend
       PiePlot3D plot = (PiePlot3D) result.getPlot();
-      plot.setNoDataMessage("La evaluación aún no determina este punto");
+      plot.setNoDataMessage("La evaluaciÃ³n aÃºn no determina este punto");
       plot.setStartAngle(270);
       plot.setDirection(Rotation.ANTICLOCKWISE);
       plot.setForegroundAlpha(0.60f);

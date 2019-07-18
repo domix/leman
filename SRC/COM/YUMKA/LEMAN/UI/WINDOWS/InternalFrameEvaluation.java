@@ -42,7 +42,7 @@ public class InternalFrameEvaluation extends InternalFrame {
   private JPanelPieChart panelCharts;
 
   public InternalFrameEvaluation(JDesktopPane desktop, JFrame parent) {
-    super(desktop, "Nueva evaluaci髇", parent, false);
+    super(desktop, "Nueva evaluaci贸n", parent, false);
     iF = this;
 
     try {
@@ -61,13 +61,13 @@ public class InternalFrameEvaluation extends InternalFrame {
     this.showInternalFrame();
   }
   public InternalFrameEvaluation(JDesktopPane desktop, JFrame parent, EvaluationsBean eval) {
-    super(desktop, "Evaluaci髇 de ", parent, false);
+    super(desktop, "Evaluaci贸n de ", parent, false);
     iF = this;
     this.evaluation = eval;
     try {
       this.organization = OrganizationsManager.getInstance().loadByPrimaryKey(eval.getIdorganization());
       this.buildUI();
-      this.setTitle("Evaluaci髇 de " + this.organization.getName());
+      this.setTitle("Evaluaci贸n de " + this.organization.getName());
     }
     catch (Exception ex) {
       ex.printStackTrace();
@@ -81,13 +81,13 @@ public class InternalFrameEvaluation extends InternalFrame {
 
     this.content.setLayout(new BorderLayout());
     this.content.add(this.panelCharts, BorderLayout.CENTER);
-    this.buttonStartAll.setText("Iniciar evaluaci髇");
+    this.buttonStartAll.setText("Iniciar evaluaci贸n");
     this.buttonStartAll.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         startEvaluation();
       }
     });
-    buttonStartByPoint.setText("Evaluaci髇 por punto");
+    buttonStartByPoint.setText("Evaluaci贸n por punto");
     buttonStartByPoint.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         startEvaluationByPoint();
@@ -136,7 +136,7 @@ public class InternalFrameEvaluation extends InternalFrame {
     }
 
     int j = JOptionPane.showOptionDialog(this.frame,
-        "Escoge a la organizaci髇 que se va a evaluar", "Leman-Evaluaci髇",
+        "Escoge a la organizaci贸n que se va a evaluar", "Leman-Evaluaci贸n",
                                          JOptionPane.OK_OPTION,
                                          JOptionPane.QUESTION_MESSAGE, null,
                                          array, null);
@@ -175,7 +175,7 @@ public class InternalFrameEvaluation extends InternalFrame {
     }
 
     int j = JOptionPane.showOptionDialog(this.frame,
-        "Escoge el Punto ISO", "Leman-Evaluaci髇",
+        "Escoge el Punto ISO", "Leman-Evaluaci贸n",
                                          JOptionPane.OK_OPTION,
                                          JOptionPane.QUESTION_MESSAGE, null,
                                          array, null);
@@ -214,7 +214,7 @@ public class InternalFrameEvaluation extends InternalFrame {
        }
 
        int j = JOptionPane.showOptionDialog(this.frame,
-           "Escoge el Punto ISO", "Leman-Evaluaci髇",
+           "Escoge el Punto ISO", "Leman-Evaluaci贸n",
                                             JOptionPane.OK_OPTION,
                                             JOptionPane.QUESTION_MESSAGE, null,
                                             array, null);
@@ -368,7 +368,7 @@ public class InternalFrameEvaluation extends InternalFrame {
        }
 
        int j = JOptionPane.showOptionDialog(this.frame,
-           "Escoge el Punto ISO", "Leman-Evaluaci髇",
+           "Escoge el Punto ISO", "Leman-Evaluaci贸n",
                                             JOptionPane.OK_OPTION,
                                             JOptionPane.QUESTION_MESSAGE, null,
                                             array, null);

@@ -41,7 +41,7 @@ public class EvaluationBeanTableModel implements TableModel {
     String result = "";
     switch (column) {
       case 0:
-        result = "Organización";
+        result = "OrganizaciÃ³n";
         break;
       case 1:
         result = "Evaluador";

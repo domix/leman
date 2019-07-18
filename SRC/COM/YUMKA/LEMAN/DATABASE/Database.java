@@ -175,7 +175,7 @@ public class Database {
     result = null;
     if (result == null) {
       JOptionPane.showMessageDialog(null,
-          "Tu nombre de usuario y/o contraseña son incorrectos",
+          "Tu nombre de usuario y/o contraseÃ±a son incorrectos",
                                     "Login incorrecto",
                                     JOptionPane.ERROR_MESSAGE);
     }
@@ -341,7 +341,7 @@ public class Database {
       result = org[0].getName();
     }
     catch (Exception ex) {
-      result = "Organización no encontrada";
+      result = "OrganizaciÃ³n no encontrada";
       //ex.printStackTrace();
     }
     return result;
@@ -357,7 +357,7 @@ public class Database {
       result = org[0].getName();
     }
     catch (Exception ex) {
-      result = "Organización no encontrada";
+      result = "OrganizaciÃ³n no encontrada";
       //ex.printStackTrace();
     }
     return result;

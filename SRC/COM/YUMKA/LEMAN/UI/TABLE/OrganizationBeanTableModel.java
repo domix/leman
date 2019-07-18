@@ -47,10 +47,10 @@ public class OrganizationBeanTableModel implements TableModel {
         result = "Nombre";
         break;
       case 1:
-        result = "Dirección";
+        result = "DirecciÃ³n";
         break;
       case 2:
-        result = "Teléfono";
+        result = "TelÃ©fono";
         break;
       default:
         result = "";

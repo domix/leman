@@ -119,7 +119,7 @@ public class InternalFrameUsers extends InternalFrame {
     int numUser = this.tableUsers.getSelectedRow();
 
     if (numUser >= 0) {
-      String men = "¿Deseas borrar al usuario " +
+      String men = "Â¿Deseas borrar al usuario " +
                    tableUsers.getValueAt(numUser, 1) + "?";
       int i = JOptionPane.showConfirmDialog(this.frame, men, "Leman-Usuarios",
                                             JOptionPane.YES_NO_OPTION,

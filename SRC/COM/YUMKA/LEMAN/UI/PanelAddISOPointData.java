@@ -42,7 +42,7 @@ public class PanelAddISOPointData extends JPanel {
 
     this.setLayout(layout);
     this.labelPoint = new JLabel("Punto");
-    this.labelDescription = new JLabel("Descripción");
+    this.labelDescription = new JLabel("DescripciÃ³n");
     this.labelBelongsToISOPoint = new JLabel("Pertenece a");
 
     this.textPoint = new JTextField(50);

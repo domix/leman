@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Clase utilizada para realizar varias operaciones de formateo de texto, n˙mero y fechas.<br>
+ * Clase utilizada para realizar varias operaciones de formateo de texto, n√∫mero y fechas.<br>
   * @author: Aitor Bilbao
  * @version: 1.0
  */
@@ -30,7 +30,7 @@ public class JhDate{
         private int Year;
 /**
  * Construye una clase jhDate con la fecha y hora por defecto.
- * La hora est· en formato 24 horas.
+ * La hora est√° en formato 24 horas.
  */
 public JhDate() {
         GregorianCalendar fecha = new GregorianCalendar();
@@ -42,7 +42,7 @@ public JhDate() {
         this.setSegundos(fecha.get(GregorianCalendar.SECOND));
 }
 /**
- * Construye un objeto jhDate con la fecha pasada por par·metros BigDecimal
+ * Construye un objeto jhDate con la fecha pasada por par√°metros BigDecimal
  * @param year BigDecimal
  * @param month BigDecimal
  * @param day BigDecimal
@@ -51,7 +51,7 @@ public JhDate(BigDecimal year, BigDecimal month, BigDecimal day) throws Exceptio
         insertadatos(year.intValue(), month.intValue(), day.intValue());
 }
 /**
- * Construye un objeto jhDate con la fecha y hora pasados por par·metros BigDecimal
+ * Construye un objeto jhDate con la fecha y hora pasados por par√°metros BigDecimal
  * @param year BigDecimal
  * @param month BigDecimal
  * @param day BigDecimal
@@ -62,7 +62,7 @@ public JhDate(BigDecimal year, BigDecimal month, BigDecimal day, BigDecimal hour
         insertadatos(year.intValue(), month.intValue(), day.intValue(), hour.intValue(), minute.intValue());
 }
 /**
- * Construye un objeto jhDate con la fecha pasada como par·metros.
+ * Construye un objeto jhDate con la fecha pasada como par√°metros.
  * @param year int
  * @param month int
  * @param day int
@@ -75,7 +75,7 @@ public JhDate(Date fecha){
         } catch(Exception e) {}
 }
 /**
- * Construye un objeto jhDate con la fecha pasada como par·metros.
+ * Construye un objeto jhDate con la fecha pasada como par√°metros.
  * @param year int
  * @param month int
  * @param day int
@@ -84,7 +84,7 @@ public JhDate(int year, int month, int day) throws Exception{
         insertadatos(year, month, day);
 }
 /**
- * Construye un objeto jhDate con la fecha y hora pasados por par·metros int
+ * Construye un objeto jhDate con la fecha y hora pasados por par√°metros int
  * @param year int
  * @param month int
  * @param day int
@@ -95,7 +95,7 @@ public JhDate(int year, int month, int day, int hour, int minute) throws Excepti
         insertadatos(year, month, day, hour, minute);
 }
 /**
- * Construye un objeto jhDate con la hora actual y la fecha pasada como par·metro seg˙n el formato indicado
+ * Construye un objeto jhDate con la hora actual y la fecha pasada como par√°metro seg√∫n el formato indicado
  * @param fecha String
  * @param formato int
  * El formato puede ser de tres tipos:
@@ -103,7 +103,7 @@ public JhDate(int year, int month, int day, int hour, int minute) throws Excepti
  *		2- aaaammdd
  *		3- aaaa-mm-dd hh:mm:ss.m (Valor recuperado desde el SQLServer)
  *		4- aaaamm
- * El String fecha puede contener o no el sÌmbolo "/".
+ * El String fecha puede contener o no el s√≠mbolo "/".
  */
 
 public JhDate(String fecha, int formato) throws Exception{
@@ -111,7 +111,7 @@ public JhDate(String fecha, int formato) throws Exception{
 }
 
 /**
- * Construye un objeto jhDate con la hora actual y la fecha pasada como par·metro seg˙n el formato indicado
+ * Construye un objeto jhDate con la hora actual y la fecha pasada como par√°metro seg√∫n el formato indicado
  * @param fecha String
  * @param formato int
  * El formato puede ser de tres tipos:
@@ -119,7 +119,7 @@ public JhDate(String fecha, int formato) throws Exception{
  *		2- aaaammdd
  *		3- aaaa-mm-dd hh:mm:ss.m (Valor recuperado desde el SQLServer)
  *		4- aaaamm
- * El String fecha puede contener o no el sÌmbolo "/".
+ * El String fecha puede contener o no el s√≠mbolo "/".
  */
 
 public JhDate(String fecha, String separador, int formato) throws Exception{
@@ -132,11 +132,11 @@ public JhDate(String fecha, String separador, int formato) throws Exception{
         if (formato !=1 && formato!= 2 && formato != 3 && formato != 4)
                 throw new Exception("Format not valid. 1- ddmmaaaa, 2-aaaammdd, 3-SQLServer, 4-aaaamm");
         if (fecha.trim().length()!= 6 && fecha.trim().length()!= 8 && fecha.trim().length()!= 10 && fecha.trim().length() > 30)
-                throw new Exception("Longitud de fecha no v·lida");
+                throw new Exception("Longitud de fecha no v√°lida");
 
         switch (formato){
                 case 1:{
-                        //La fecha est· en formato ddmmaaaa
+                        //La fecha est√° en formato ddmmaaaa
                         if (fecha.indexOf(separador) == -1){
                                 //No hay barras
                                 dia = new BigDecimal(fecha.substring(0,2)).intValue();
@@ -150,7 +150,7 @@ public JhDate(String fecha, String separador, int formato) throws Exception{
                         break;
                 }
                 case 2:{
-                        //La fecha est· en formato aaaammdd
+                        //La fecha est√° en formato aaaammdd
                         if (fecha.indexOf(separador) == -1){
                                 //No hay barras
                                 ano = new BigDecimal(fecha.substring(0,4)).intValue();
@@ -174,7 +174,7 @@ public JhDate(String fecha, String separador, int formato) throws Exception{
                         break;
                 }
                 case 4:{
-                        //La fecha est· en formato aaaamm
+                        //La fecha est√° en formato aaaamm
                         if (fecha.indexOf(separador) == -1){
                                 //No hay barras
                                 ano = new BigDecimal(fecha.substring(0,4)).intValue();
@@ -203,9 +203,9 @@ public JhDate(String fecha, String separador, int formato) throws Exception{
  * 		<li>1: Segundos</li>
  * 		<li>2: Minutos</li>
  * 		<li>3: Horas </li>
- * 		<li>4: DÌas</li>
+ * 		<li>4: D√≠as</li>
  * 		<li>5: Meses</li>
- * 		<li>6: AÒos</li>
+ * 		<li>6: A√±os</li>
  * 	</ul>
  * </p>
  * @param incremento int
@@ -216,36 +216,36 @@ public void add(int campo, int incremento){
                 calendar.set(this.Year, ((this.Month) - 1), this.Day, this.Horas, this.Minutos, this.Segundos);
                 switch (campo){
                         case 1:{
-                                //AÒadimos segundos, todavÌa no lo necesitamos
+                                //A√±adimos segundos, todav√≠a no lo necesitamos
                                 break;
                         }
                         case 2:{
-                                //AÒadimos minutos
+                                //A√±adimos minutos
                                 calendar.add(Calendar.MINUTE, incremento);
                                 break;
                         }
                         case 3:{
-                                //AÒadimos horas
+                                //A√±adimos horas
                                 calendar.add(Calendar.HOUR_OF_DAY, incremento);
                                 break;
                         }
                         case 4:{
-                                //AÒadimos dÌas
+                                //A√±adimos d√≠as
                                 calendar.add(Calendar.DATE, incremento);
                                 break;
                         }
                         case 5:{
-                                //AÒadimos meses
+                                //A√±adimos meses
                                 calendar.add(Calendar.MONTH, incremento);
                                 break;
                         }
                         case 6:{
-                                //AÒadimos aÒos
+                                //A√±adimos a√±os
                                 calendar.add(Calendar.YEAR, incremento);
                                 break;
                         }
                 }
-                //AÒado el incremento
+                //A√±ado el incremento
                 insertadatos(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE));
         } catch (Exception e){}
 }
@@ -260,13 +260,13 @@ public void addDays(int days) {
 }
 
 /**
- * Compara dos fechas entre sÌ
- * Par·metros de entrada:
-                 - fecha: variable de tipo Date que recibe la funciÛn
-   Par·metros de salida:
-                   - -1: si la fecha es mayor que la pasada por par·metro
+ * Compara dos fechas entre s√≠
+ * Par√°metros de entrada:
+                 - fecha: variable de tipo Date que recibe la funci√≥n
+   Par√°metros de salida:
+                   - -1: si la fecha es mayor que la pasada por par√°metro
                    -  0: si la fecha introducida es igual
-                   -  1: si la fecha es menor que la pasada por par·metro
+                   -  1: si la fecha es menor que la pasada por par√°metro
  */
 public int equals(JhDate fecha2) {
         int dia = fecha2.getDay();
@@ -279,19 +279,19 @@ public int equals(JhDate fecha2) {
         //Miramos si las 2 fechas son igual
         if ((ano == this.getYear()) && (mes == this.getMonth()) && (dia == this.getDay()) && (hora == this.getHoras()) && (minuto == this.getMinutos())) return 0;
 
-        //Comparamos el aÒo
+        //Comparamos el a√±o
         if (ano > this.getYear()) return 1;
         if (ano < this.getYear()) return -1;
 
-        //Si el aÒo es igual comparamos los meses
+        //Si el a√±o es igual comparamos los meses
         if (mes > this.getMonth()) return 1;
         if (mes < this.getMonth()) return -1;
 
-        //Si son del mismo aÒo y mes comparamos el dÌa
+        //Si son del mismo a√±o y mes comparamos el d√≠a
         if (dia > this.getDay()) return 1;
         if (dia < this.getDay()) return -1;
 
-        //Si son del mismo dÌa comparamos las horas
+        //Si son del mismo d√≠a comparamos las horas
         if (hora > this.getHoras()) return 1;
         if (hora < this.getHoras()) return -1;
 
@@ -388,7 +388,7 @@ public int getHoras() {
         return Horas;
 }
 /**
- * Nos devuelve la hora con descripciÛn larga
+ * Nos devuelve la hora con descripci√≥n larga
  * @return java.lang.String
  * @param formato int
  * El formato puede tener los siguientes valores:
@@ -444,7 +444,7 @@ public String getHour(int formato) {
         return "";
 }
 /**
- * Nos devuelve la fecha con descripciÛn larga
+ * Nos devuelve la fecha con descripci√≥n larga
  * @return java.lang.String
  * @param formato int
  * El formato puede tener los siguientes valores:
@@ -482,9 +482,9 @@ public int getSegundos() {
  * @return long
  * @param int campo
  * Los valores de campo pueden ser:
- *	- 1: DÌas transcurridos.
+ *	- 1: D√≠as transcurridos.
  *	- 2: Meses transcurridos.
- *	- 3: AÒos transcurridos
+ *	- 3: A√±os transcurridos
  *	- 4: Horas transcurridas
  *	- 5: Segundos transcurridos
  */
@@ -537,7 +537,7 @@ public long getTiempoTranscurrido(JhDate fecha2, int campo) {
         return diferencia;
 }
 /**
- * Inserte aquÌ la descripciÛn del mÈtodo.
+ * Inserte aqu√≠ la descripci√≥n del m√©todo.
  * @return java.lang.String
  */
 public long getTime() {
@@ -562,7 +562,7 @@ public void insertadatos(int year, int month, int day) throws Exception{
         this.setSegundos(00);
 }
 /**
- * Construye un objeto jhDate con la fecha y hora pasados por par·metros int
+ * Construye un objeto jhDate con la fecha y hora pasados por par√°metros int
  * @param year int
  * @param month int
  * @param day int
@@ -584,10 +584,10 @@ public void insertadatos(int year, int month, int day, int hour, int minute) thr
         this.setSegundos(0);
 }
 /**
- * Compara dos fechas entre sÌ
- * Par·metros de entrada:
-                 - fecha: variable de tipo Date que recibe la funciÛn
-   Par·metros de salida:
+ * Compara dos fechas entre s√≠
+ * Par√°metros de entrada:
+                 - fecha: variable de tipo Date que recibe la funci√≥n
+   Par√°metros de salida:
                    - -1: si la fecha introducida es menor
                    -  0: si la fecha introducida es igual
                    -  1: si la fecha introducida es mayor
@@ -625,10 +625,10 @@ public void setYear(int newYear) {
 
 /**
  * Valida la fecha
- * @param ano int	AÒo a validar
+ * @param ano int	A√±o a validar
  * @param mes int	Mes a validar
- * @param dia int	DÌa a validar
- * @return boolean Indica si la fecha es v·lida
+ * @param dia int	D√≠a a validar
+ * @return boolean Indica si la fecha es v√°lida
  */
 public boolean validaFecha(int ano, int mes, int dia) {
         if (ano == 0 && mes == 0 && dia == 0) return true;
@@ -637,7 +637,7 @@ public boolean validaFecha(int ano, int mes, int dia) {
                 if ((dia<1) || (dia>30)) return false;
         if ((mes==1)||(mes==3)||(mes==5)||(mes==7)||(mes==8)||(mes==10)||(mes==12))
                         if ((dia < 1) || (dia>31)) return false;
-        if ((mes==2))//Tratamos los aÒos bisiestos
+        if ((mes==2))//Tratamos los a√±os bisiestos
                 if ( ((ano % 4) == 0) && (((ano % 100)!= 0) || ((ano % 400) == 0))  ){
                         if ((dia<1) || (dia>29)){
                                 return false;
@@ -652,8 +652,8 @@ public boolean validaFecha(int ano, int mes, int dia) {
 
 }
 /**
- * Realiza la validaciÛn de las horas.
- * @return boolean	Indica si la hora es v·lida o no
+ * Realiza la validaci√≥n de las horas.
+ * @return boolean	Indica si la hora es v√°lida o no
  * @param hora int	Hora a validar
  * @param minuto int	Minutos a validar
  */

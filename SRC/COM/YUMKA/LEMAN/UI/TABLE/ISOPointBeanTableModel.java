@@ -43,7 +43,7 @@ public class ISOPointBeanTableModel implements TableModel {
         result = "Punto";
         break;
       case 1:
-        result = "Descripción";
+        result = "DescripciÃ³n";
         break;
       case 2:
         result = "Pertenece";

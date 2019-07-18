@@ -64,7 +64,7 @@ public class LoginDialogOld extends JDialog {
     loginFields.setLayout(layout);
     loginFields.add(new JLabel("Nombre"));
     loginFields.add(user);
-    loginFields.add(new JLabel("Contraseña"));
+    loginFields.add(new JLabel("ContraseÃ±a"));
     loginFields.add(pass);
     JButton loginSubmit = new JButton("Login");
     login.add(loginFields);
@@ -87,7 +87,7 @@ public class LoginDialogOld extends JDialog {
          layout2.setHgap(10);*/accountFields.setLayout(layout2);
     accountFields.add(new JLabel("Nombre"));
     accountFields.add(user2);
-    accountFields.add(new JLabel("Contraseña"));
+    accountFields.add(new JLabel("ContraseÃ±a"));
     accountFields.add(pass2);
     accountFields.add(new JLabel("eMail"));
     accountFields.add(eMail);

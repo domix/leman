@@ -26,8 +26,8 @@ public class NavigationPanel extends JPanel {
   private JButton b02;
   private JButton b03;
   private Frame frame;
-  private String introduction = new String("Introducción");
-  private String whoApply = new String("¿A quien se aplica?");
+  private String introduction = new String("IntroducciÃ³n");
+  private String whoApply = new String("Â¿A quien se aplica?");
 
   public NavigationPanel(Frame frame) {
     this.frame = frame;

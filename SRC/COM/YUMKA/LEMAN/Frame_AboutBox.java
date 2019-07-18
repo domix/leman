@@ -43,7 +43,7 @@ public class Frame_AboutBox extends JDialog implements ActionListener {
   BorderLayout borderLayout2 = new BorderLayout();
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
-  String product = "Sistema de Gestión de Calidad";
+  String product = "Sistema de GestiÃ³n de Calidad";
   String version = "1.0";
   String copyright = "Copyright (c) 2004";
   String comments = "";

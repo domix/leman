@@ -88,10 +88,10 @@ public class Frame extends JFrame {
     contentPane = (JPanel)this.getContentPane();
     contentPane.setLayout(borderLayout1);
     this.setSize(new Dimension(800, 550));
-    this.setTitle("Leman - Sistema de Gesti髇 de la Calidad");
+    this.setTitle("Leman - Sistema de Gesti贸n de la Calidad");
     statusBar.setText(" ");
     jButton1.setIcon(image1);
-    jButton1.setToolTipText("Abrir Evaluaci髇");
+    jButton1.setToolTipText("Abrir Evaluaci贸n");
     jButton2.setIcon(image2);
     jButton2.setToolTipText("Cerrar Archivo");
     jButton3.setIcon(image3);
@@ -150,7 +150,7 @@ public class Frame extends JFrame {
         Library l;
         c = new Contributor("Cesar Serrano", "cesareo@hotmail.com");
         contributors.add(c);
-        c = new Contributor("Domingo Su醨ez Torres", "yumkasoftware@prodigy.net.mx");
+        c = new Contributor("Domingo Su谩rez Torres", "yumkasoftware@prodigy.net.mx");
         contributors.add(c);
         c = new Contributor("Elmy Helen", "elhemylen@hotmail.com");
         contributors.add(c);
@@ -169,11 +169,11 @@ public class Frame extends JFrame {
         ProjectInfo pI = new ProjectInfo();
         pI.setContributors(contributors);
         pI.setCopyright("Copyrigth (c) 1997-2004");
-        pI.setInfo("Coordinador: M.Sc. Miguel Angel L髉ez Flores");
+        pI.setInfo("Coordinador: M.Sc. Miguel Angel L贸pez Flores");
         pI.setLicenceName("GPL");
         pI.setLicenceText(ResourceLoader.getTextFile("licence-LGPL.txt"));
         pI.setLogo(ResourceLoader.getImage("about.png"));
-        pI.setName("Leman-Sistema de Gesti髇 de la Calidad");
+        pI.setName("Leman-Sistema de Gesti贸n de la Calidad");
         pI.setVersion("1.0");
         pI.setLibraries(libraries);
         AboutFrame aF = new AboutFrame("Acerca de...", pI);
@@ -228,11 +228,11 @@ public class Frame extends JFrame {
     DialogOpenEvaluation dialog = new DialogOpenEvaluation(this);
     EvaluationsBean eval = dialog.getEvaluation();
     if(eval != null) {
-      System.out.println("Abriendo evaluaci髇" + eval);
+      System.out.println("Abriendo evaluaci贸n" + eval);
       new InternalFrameEvaluation(this.desk, this, eval);
     }
     else {
-      System.out.println("No se abre evaluaci髇");
+      System.out.println("No se abre evaluaci贸n");
     }
   }
 }

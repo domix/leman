@@ -19,7 +19,7 @@ import java.awt.event.*;
 public class Rogaro extends InternalFrame {
   JTabbedPane tabbedPane;
   public Rogaro(JDesktopPane p0, JFrame p2, boolean p3) {
-    super(p0, "Información de Rogaro", p2, true);
+    super(p0, "InformaciÃ³n de Rogaro", p2, true);
     JEditorPane htmlViewer = null;
     tabbedPane = new JTabbedPane();
     try {
@@ -69,7 +69,7 @@ public class Rogaro extends InternalFrame {
                dispose();
              }
            });
-    this.tabbedPane.addTab("Información", new JScrollPane(htmlViewer));
+    this.tabbedPane.addTab("InformaciÃ³n", new JScrollPane(htmlViewer));
     JLabel carta = new JLabel();
     JLabel organigrama = new JLabel();
     JLabel matriz01 = new JLabel();

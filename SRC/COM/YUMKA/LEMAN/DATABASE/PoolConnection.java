@@ -40,7 +40,7 @@ public class PoolConnection implements Runnable {
   }
 
   public synchronized Connection getConnection() throws SQLException {
-    //System.out.println("Otorgando conexión...");
+    //System.out.println("Otorgando conexiÃ³n...");
     if(!availableConnections.isEmpty()) {
       Connection existingConnection =
           (Connection)availableConnections.lastElement();
@@ -140,7 +140,7 @@ public class PoolConnection implements Runnable {
       // Establish network connection to database
       Connection connection =
           DriverManager.getConnection(url, username, password);
-      //System.out.println("Creando Conexión");
+      //System.out.println("Creando ConexiÃ³n");
       return(connection);
     }
     catch(ClassNotFoundException cnfe) {
@@ -156,7 +156,7 @@ public class PoolConnection implements Runnable {
     availableConnections.addElement(connection);
     // Wake up threads that are waiting for a connection
     notifyAll();
-    //System.out.println("Cerrando conexión...");
+    //System.out.println("Cerrando conexiÃ³n...");
   }
 
   public synchronized int totalConnections() {

@@ -56,10 +56,10 @@ public class PanelAddUserData extends JPanel {
     this.setLayout(layout);
     this.labelLogin = new JLabel(" Login");
     this.labelName = new JLabel(" Nombre");
-    this.labelCompany = new JLabel(" Organización");
+    this.labelCompany = new JLabel(" OrganizaciÃ³n");
     this.labelJobPosition = new JLabel(" Puesto");
-    this.labelPassword = new JLabel(" Contraseña");
-    this.labelConfirmPassword = new JLabel(" Confirma la Contraseña");
+    this.labelPassword = new JLabel(" ContraseÃ±a");
+    this.labelConfirmPassword = new JLabel(" Confirma la ContraseÃ±a");
 
     this.textLogin = new JTextField(50);
     this.textName = new JTextField(30);

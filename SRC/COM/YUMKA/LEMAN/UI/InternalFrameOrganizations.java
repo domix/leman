@@ -107,7 +107,7 @@ public class InternalFrameOrganizations extends InternalFrame {
     int numOrganization = this.tableOrgs.getSelectedRow();
 
     if (numOrganization >= 0) {
-      String men = "¿Desean borrar a la organización " +
+      String men = "Â¿Desean borrar a la organizaciÃ³n " +
                    tableOrgs.getValueAt(numOrganization, 0) + "?";
       int i = JOptionPane.showConfirmDialog(this.frame, men,
                                             "Leman-Organizaciones",

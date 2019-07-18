@@ -40,7 +40,7 @@ public class DialogAskQuestion extends JDialog {
   public int status = -2;
 
   public DialogAskQuestion(InternalFrame frameEvaluation, EvaluationsBean evaluation, QuestionsBean question, ResponseBean[] responses) {
-    super(frameEvaluation.getFrame(), "Leman-Evaluaci髇", true);
+    super(frameEvaluation.getFrame(), "Leman-Evaluaci贸n", true);
     this.frame = frameEvaluation.getFrame();
     this.frameEvaluation = frameEvaluation;
     this.evaluation = evaluation;
@@ -55,7 +55,7 @@ public class DialogAskQuestion extends JDialog {
   }
 
   public DialogAskQuestion(InternalFrame frameEvaluation, EvaluationsBean evaluation, EvaluationsdetailBean question, ResponseBean[] responses) {
-    super(frameEvaluation.getFrame(), "Leman-Evaluaci髇", true);
+    super(frameEvaluation.getFrame(), "Leman-Evaluaci贸n", true);
     this.frame = frameEvaluation.getFrame();
     this.frameEvaluation = frameEvaluation;
     this.evaluation = evaluation;
@@ -101,8 +101,8 @@ public class DialogAskQuestion extends JDialog {
 
     buttons.setLayout(new GridLayout(1, 3));
     buttons.add(new JPanel());
-    ok.setToolTipText("Suspende la evaluaci髇. Puede continuarse en otra ocasi髇.");
-    cancel.setToolTipText("Cancela la evaluaci髇. No guarda los datos.");
+    ok.setToolTipText("Suspende la evaluaci贸n. Puede continuarse en otra ocasi贸n.");
+    cancel.setToolTipText("Cancela la evaluaci贸n. No guarda los datos.");
     buttons.add(ok);
     buttons.add(cancel);
     panel.setLayout(borderLayout1);
@@ -166,7 +166,7 @@ public class DialogAskQuestion extends JDialog {
         try {
           EvaluationsdetailBean t = LemanMain.database.addEvaluationDetail(this.evaluation, this.question,
                                                  this.responses[i]);
-          int k = JOptionPane.showConfirmDialog(InternalFrameEvaluation.iF.getFrame(), "緿eseas Agregar un comentario?", "Leman-Comentario", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+          int k = JOptionPane.showConfirmDialog(InternalFrameEvaluation.iF.getFrame(), "驴Deseas Agregar un comentario?", "Leman-Comentario", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
           if(k==0) {
             //JOptionPane.showConfirmDialog(InternalFrameEvaluation.iF.getFrame(), t.toString(), "Leman-Comentario", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
             this.doComment(t);

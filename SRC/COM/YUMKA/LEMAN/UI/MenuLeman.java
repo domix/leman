@@ -37,13 +37,13 @@ public class MenuLeman extends JMenuBar {
   }
   private void buildMenu() {
     jMenuFile.setText("Archivo");
-    jMenuFileNewEvaluation.setText("Realizar evaluaciÛn");
+    jMenuFileNewEvaluation.setText("Realizar evaluaci√≥n");
     jMenuFileNewEvaluation.addActionListener(new ActionListener() {
                              public void actionPerformed(ActionEvent e) {
                                frame.jMenuFileNewEvaluation_actionPerformed(e);
                              }
                            });
-    jMenuFileOpenEvaluation.setText("Abrir evaluaciÛn");
+    jMenuFileOpenEvaluation.setText("Abrir evaluaci√≥n");
     jMenuFileOpenEvaluation.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         frame.jMenuFileOpenEvaluation_actionPerformed(e);
@@ -57,7 +57,7 @@ public class MenuLeman extends JMenuBar {
         frame.jMenuFileExit_actionPerformed(e);
       }
     });
-    jMenuCatalogs.setText("Cat·logos");
+    jMenuCatalogs.setText("Cat√°logos");
     jMenuCatalogsISOPoints.setText("Puntos ISO");
     jMenuCatalogsISOPoints.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {

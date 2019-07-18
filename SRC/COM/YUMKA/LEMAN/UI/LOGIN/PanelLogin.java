@@ -8,7 +8,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
- * Panel para hacer login a la aplicación
+ * Panel para hacer login a la aplicaciÃ³n
  * @author <a href="mailto:yumkasoftware@prodigy.net.mx">Domingo Su&aacute;rez Torres </a>
  * @version 1.0
  */
@@ -19,7 +19,7 @@ public class PanelLogin extends JPanel {
     this.setLayout(new GridLayout(2, 2));
     this.add(new JLabel("Nombre de Usuario:"));
     this.add(this.userName);
-    this.add(new JLabel("Contraseña:"));
+    this.add(new JLabel("ContraseÃ±a:"));
     this.add(this.userPassword);
   }
   public void addActionListenerFields(ActionListener al) {

@@ -42,7 +42,7 @@ import org.jfree.report.modules.gui.base.PreviewInternalFrame;
 public class InternalFrameCatalogISOPoints extends InternalFrameCatalog {
   ISOPointBean[] points;
   public InternalFrameCatalogISOPoints(JDesktopPane desktop, JFrame parent) {
-    super(desktop, "Catálogo de los Puntos de la Norma ISO", parent);
+    super(desktop, "CatÃ¡logo de los Puntos de la Norma ISO", parent);
     try {
       this.loadData();
     }
@@ -185,7 +185,7 @@ public class InternalFrameCatalogISOPoints extends InternalFrameCatalog {
            factory.setHorizontalAlignment(ElementAlignment.LEFT);
            factory.setVerticalAlignment(ElementAlignment.MIDDLE);
            factory.setNullString("-");
-           factory.setFieldname("Descripción");
+           factory.setFieldname("DescripciÃ³n");
            report.getItemBand().addElement(factory.createElement());
      return report;
   }
@@ -215,7 +215,7 @@ public class InternalFrameCatalogISOPoints extends InternalFrameCatalog {
     int numISOPoint = this.table.getSelectedRow();
 
     if (numISOPoint >= 0) {
-      String men = "¿Deseas borrar el Punto ISO " +
+      String men = "Â¿Deseas borrar el Punto ISO " +
                    table.getValueAt(numISOPoint, 1) + "?";
       int i = JOptionPane.showConfirmDialog(this.frame, men, "Leman-Puntos ISO",
                                             JOptionPane.YES_NO_OPTION,

@@ -26,7 +26,7 @@ public class DialogOpenEvaluation extends JDialog {
   JButton cancelButton;
 
   public DialogOpenEvaluation(Frame frame) {
-    super(frame, "Abrir Evaluación", true);
+    super(frame, "Abrir EvaluaciÃ³n", true);
     try {
       jbInit();
       pack();

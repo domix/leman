@@ -57,11 +57,11 @@ public class PanelDataInputUser extends JPanel {
 
     this.setLayout(layout);
     this.labelName = new JLabel(" Nombre");
-    this.labelEMail = new JLabel(" Correo Electrónico");
-    this.labelCompany = new JLabel(" Organización");
+    this.labelEMail = new JLabel(" Correo ElectrÃ³nico");
+    this.labelCompany = new JLabel(" OrganizaciÃ³n");
     this.labelJobPosition = new JLabel(" Puesto");
-    this.labelPassword = new JLabel(" Contraseña");
-    this.labelConfirmPassword = new JLabel(" Confirma la Contraseña");
+    this.labelPassword = new JLabel(" ContraseÃ±a");
+    this.labelConfirmPassword = new JLabel(" Confirma la ContraseÃ±a");
 
     this.textName = new JTextField(50);
     this.textEMail = new JTextField(30);

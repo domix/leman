@@ -42,8 +42,8 @@ public class PanelAddOrganizationData extends JPanel {
 
     this.setLayout(layout);
     this.labelName = new JLabel(" Nombre");
-    this.labelAddress = new JLabel(" Dirección");
-    this.labelTelephone = new JLabel(" Teléfono");
+    this.labelAddress = new JLabel(" DirecciÃ³n");
+    this.labelTelephone = new JLabel(" TelÃ©fono");
 
     this.textName = new JTextField(30);
     this.textAddress = new JTextField(50);

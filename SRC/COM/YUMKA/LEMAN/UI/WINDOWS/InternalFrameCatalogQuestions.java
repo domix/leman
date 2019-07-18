@@ -17,7 +17,7 @@ import com.yumka.leman.ui.DialogQuestion;
 public class InternalFrameCatalogQuestions extends InternalFrameCatalog {
   QuestionsBean[] questions;
   public InternalFrameCatalogQuestions(JDesktopPane desktop, JFrame parent) {
-    super(desktop, "Catálogo de Preguntas", parent);
+    super(desktop, "CatÃ¡logo de Preguntas", parent);
     try {
       this.loadData();
     }
@@ -65,7 +65,7 @@ public class InternalFrameCatalogQuestions extends InternalFrameCatalog {
     int numQuestion = this.table.getSelectedRow();
 
     if (numQuestion >= 0) {
-      String men = "¿Deseas borrar la pregunta " + table.getValueAt(numQuestion, 0) +
+      String men = "Â¿Deseas borrar la pregunta " + table.getValueAt(numQuestion, 0) +
                    "?";
       int i = JOptionPane.showConfirmDialog(this.frame, men, "Leman-Preguntas",
                                             JOptionPane.YES_NO_OPTION,
