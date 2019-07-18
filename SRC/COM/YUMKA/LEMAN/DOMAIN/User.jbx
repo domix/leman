@@ -1,0 +1,11 @@
+[PropertyInfo]
+login,String,false,false,login,login,true,<default>
+name,String,false,false,name,name,true,<default>
+company,String,false,false,company,company,true,<default>
+jobPosition,String,false,false,jobPosition,jobPosition,true,<default>
+password,String,false,false,password,password,true,<default>
+[IconNames]
+
+
+
+

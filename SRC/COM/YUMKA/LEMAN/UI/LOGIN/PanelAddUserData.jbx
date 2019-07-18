@@ -1,0 +1,17 @@
+[PropertyInfo]
+tUserCompany,JTextField,false,false, , ,false,<default>
+tUserJobPosition,JTextField,false,false, , ,false,<default>
+tUserLogin,JTextField,false,false, , ,false,<default>
+tUserName,JTextField,false,false, , ,false,<default>
+tUserPassword,JPasswordField,false,false, , ,false,<default>
+tUserPasswordVerified,JPasswordField,false,false, , ,false,<default>
+userLogin,String,false,false,userLogin,userLogin,true,<default>
+userName,String,false,false,UserName,UserName,true,<default>
+userPassword,String,false,false,userPassword,userPassword,true,<default>
+userCompany,String,false,false,userCompany,userCompany,true,<default>
+userJobPosition,String,false,false,userJobPosition,userJobPosition,true,<default>
+[IconNames]
+
+
+
+

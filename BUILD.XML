@@ -1,0 +1,155 @@
+<project default="usage" basedir=".">
+  <property file="build.properties"/>
+
+  <target name="clean" depends="info">
+    <delete dir="${project.build}"/>
+    <delete dir="${project.dist}"/>
+    <delete dir="${project.doc}"/>
+  </target>
+
+  <target name="init" depends="clean">
+    <mkdir dir="${project.build}"/>
+    <mkdir dir="${project.dist}"/>
+    <mkdir dir="${project.doc}"/>
+    <mkdir dir="${project.dist.lib}"/>
+  </target>
+
+  <target name="info">
+    <echo>${project.name} Ver. ${project.version}</echo>
+    <echo>Autor: ${project.author} (${project.author.email})</echo>
+    <echo>${project.description}</echo>
+    <echo></echo>
+    <echo>IMPORTANTE: Los mensajes no continen acentos a proposito.</echo>
+  </target>
+
+  <target name="usage" depends="info">
+    <echo>Teclea:</echo>
+    <echo>"ant clean"   Para limpiar los directorios generados.</echo>
+    <echo>"ant compile" Para compilar el codigo fuente.</echo>
+    <echo>"ant dist"    Para crear al archivo JAR con la aplicacion.</echo>
+    <echo>"ant run"     Para ejecutar la aplicacion.</echo>
+    <echo>"ant doc"     Para generar la documentacion Java Docs.</echo>
+    <echo>"ant usage"   Para mostrar esta ayuda.</echo>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${project.source}" 
+           destdir="${project.build}"
+           verbose="${project.build.compile.verbose}"
+           debug="${project.build.compile.debug}"
+           deprecation="${project.build.compile.deprecation}">
+      <classpath>
+        <fileset dir="${project.lib}">
+        <include name="**/*.jar"/>
+      </fileset>
+      </classpath>
+    </javac> 
+  </target>
+
+  <target name="dist" depends="compile">
+<copy todir="${project.build}">
+      <fileset dir="${project.source}">
+        <include name="**/*.jpe"/>
+        <include name="**/*.jpeg"/>
+        <include name="**/*.rmf"/>
+        <include name="**/*.wav"/>
+        <include name="**/*.mid"/>
+        <include name="**/*.midi"/>
+        <include name="**/*.au"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.png"/>
+        <include name="**/*.PNG"/>
+        <include name="**/*.jpg"/>
+        <include name="**/*.JPG"/>
+        <include name="**/*.aiff"/>
+        <include name="**/*.properties"/>
+        <include name="**/*.xpl"/>
+        <include name="**/*.xml"/>
+        <include name="**/*.zip"/>
+      </fileset>
+    </copy>
+    <copy todir="${project.dist.lib}">
+      <fileset dir="${project.lib}">
+        <include name="**/*.jar"/>
+      </fileset>
+    </copy>
+    <jar jarfile="${project.dist}/${project.build.jar}" 
+         basedir="${project.build}"
+         compress="${project.build.jar.compress}">
+      <manifest>
+        <attribute name="Built-By" value="${project.author}"/>
+        <attribute name="Main-Class" value="${project.mainclass}"/>
+        <attribute name="Class-Path" value="${project.build.jar.classpath}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="run" depends="dist">
+    <java jar="${project.dist}/${project.build.jar}" 
+          fork="${project.run.fork}"
+          failonerror="${project.run.failonerror}"
+          maxmemory="${project.run.maxmemory}">
+      <arg value="-h"/>
+      <classpath>
+        <pathelement path="${java.class.path}/"/>
+        <pathelement location="${project.lib}/j2ee.jar"/>
+        <pathelement location="${project.lib}/firebird.jar"/>
+      </classpath>
+    </java>
+  </target>  
+
+  <target name="doc">
+    <delete dir="${project.doc}"/>
+    <mkdir dir="${project.doc}"/>
+    <javadoc sourcepath="${project.source}"
+             destdir="${project.doc}"
+             author="${project.doc.author}"
+             packagenames="${project.doc.packages}"
+             verbose="${project.doc.verbose}"
+             private="${project.doc.private}"
+             splitindex="${project.doc.splitindex}"
+             version="${project.doc.version}"
+             windowtitle="${project.doc.windowtitle}"
+             doctitle="${project.doc.doctitle}"
+             Header="${project.doc.header}"
+             Footer="${project.doc.footer}"
+             bottom="${project.doc.bottom}"
+             failonerror="${project.doc.failonerror}"
+             excludepackagenames="${project.doc.excludepackagenames}">
+             <tag name="${project.doc.tag.todo}" scope="${project.doc.tag.todo.scope}" description="${project.doc.tag.todo.description}" />
+    </javadoc>
+  </target>
+  <target name="validate-jdepend-task">
+ <echo>${basedir}/${project.lib}</echo>
+
+
+    <property name="jdepend.task.class"
+      value="org.apache.tools.ant.taskdefs.optional.jdepend.JDependTask" />
+
+    <available property="jdependtask.present"
+      classname="${jdepend.task.class}" />
+
+    <fail message="Missing jdepend.jar in system CLASSPATH"
+      unless="jdependtask.present" />
+
+  </target>
+  <target name="jdepend"  if="jdependtask.present"
+    depends="validate-jdepend-task, compile"
+    description="Runs the JDepend Ant task">
+    <jdepend fork="true" format="xml"
+      outputfile="doc/jdepend-report.xml">
+      <classespath>
+        <pathelement location="${project.source}" />
+      </classespath>
+      <classpath>
+        <fileset dir="${project.lib}">
+          <include name="**/*.jar"/>
+        </fileset>
+      </classpath>
+    </jdepend>
+
+    <style basedir="doc" destdir="doc"
+      includes="jdepend-report.xml" style="${ant.home}/etc/jdepend.xsl" />
+  </target>
+
+</project>

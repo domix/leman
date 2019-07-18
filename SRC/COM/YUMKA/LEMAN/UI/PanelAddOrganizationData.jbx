@@ -1,0 +1,19 @@
+[PropertyInfo]
+labelAddress,JLabel,false,false, , ,false,<default>
+labelName,JLabel,false,false, , ,false,<default>
+labels,JPanel,false,false, , ,false,<default>
+labelTelephone,JLabel,false,false, , ,false,<default>
+panel,JPanel,false,false, , ,false,<default>
+splitPane,JSplitPane,false,false, , ,false,<default>
+textAddress,JTextField,false,false, , ,false,<default>
+textFields,JPanel,false,false, , ,false,<default>
+textJobPosition,JTextField,false,false, , ,false,<default>
+textName,JTextField,false,false, , ,false,<default>
+userCompany,String,false,false, , ,true,<default>
+userJobPosition,String,false,false, , ,true,<default>
+userName,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+
