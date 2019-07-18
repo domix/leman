@@ -64,6 +64,7 @@ public class DialogLogin extends JDialog {
     this.show();
   }
   public boolean checkLogin() {
+    System.out.println("login");
     boolean result = false;
     String user = this.panelLogin.getUserName();
     String password = new String(this.panelLogin.getUserPassword());

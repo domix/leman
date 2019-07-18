@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.*;
 
-import com.l2fprod.gui.plaf.skin.SkinLookAndFeel;
+//import com.l2fprod.gui.plaf.skin.SkinLookAndFeel;
 import com.yumka.leman.database.Database;
 import com.yumka.leman.database.UserBean;
 import com.yumka.leman.ui.login.DialogLogin;
@@ -72,9 +72,9 @@ public class LemanMain {
       JFrame.setDefaultLookAndFeelDecorated(true);
       JDialog.setDefaultLookAndFeelDecorated(true);
 
-      SkinLookAndFeel.setSkin(SkinLookAndFeel.loadThemePack(LemanMain.class.
+      /*SkinLookAndFeel.setSkin(SkinLookAndFeel.loadThemePack(LemanMain.class.
           getResource("aquathemepack.zip")));
-      SkinLookAndFeel.enable();
+      SkinLookAndFeel.enable();*/
       //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
       //UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
     }
